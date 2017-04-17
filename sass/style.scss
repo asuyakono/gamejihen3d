@@ -1,0 +1,412 @@
+/*
+Theme Name: gamejihen3d
+Description: style of gamejihen3d
+Author: asuya kono
+*/
+
+@import "_reset.scss";
+
+// **********************
+// utility
+// **********************
+
+$smartphone: 479px;
+
+$color-text: #444;
+$color-subText: #8f99a9;
+$color-link: #E91E63;
+$color-bg: #efefef;
+
+// **********************
+// mixin
+// **********************
+
+@mixin smartphone {
+  @media only screen and (max-width: 479px){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 480px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+// **********************
+// grand style
+// **********************
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック',sans-serif;
+  line-height: 1.5;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+// **********************
+// header
+// **********************
+
+.header {
+  padding: 64px 32px;
+  background: url(images/fv_bg.png);
+  background-size: cover;
+  @include smartphone {
+    padding: 32px 16px;
+  }
+}
+
+.header__logo {
+  margin: auto;
+  width: 540px;
+  height: 391.5px;
+  background: url(images/logo.png) no-repeat;
+  background-size: cover;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  @include smartphone {
+    width: 300px;
+    height: 216px;
+  }
+}
+
+.header__copy {
+  position: relative;
+  top: -130px;
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 0px 8px black;
+  @include smartphone {
+    top: -70px;
+    padding-bottom: 16px;
+    font-size: 1.2em;
+    line-height: 1.3;
+  }
+}
+
+.header__description {
+  margin: 0px auto 16px;
+  padding: 16px;
+  width: 440px;
+  border: 3px solid white;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  line-height: 1.5;
+  @include smartphone {
+    width: 320px;
+    font-size: 1.0em;
+    line-height: 1.5;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 440px;
+  @include smartphone {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    border-radius: 4px;
+    li:first-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.header__button {
+  display: block;
+  margin: 0 auto;
+  width: 212px;
+  height: 44px;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 44px;
+  text-align: center;
+  outline: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &--iTunes {
+    @extend .header__button;
+    background-color: #c761f1;
+  }
+  &--letter {
+    @extend .header__button;
+    background-color: #1C8D9C;
+  }
+  @include smartphone {
+    width: auto;
+  }
+}
+
+// **********************
+// personality
+// **********************
+
+.personality {
+  padding: 40px 0 20px 0;
+  background-color: white;
+  text-align: center;
+  @include smartphone {
+    display: none;
+  }
+}
+
+.personality__title {
+  padding-bottom: 32px;
+  font-size: 2em;
+}
+
+.personality__profile {
+  margin-bottom: 14px;
+  margin: 0 auto;
+  padding: 0 60px 0 60px;
+  max-width: 960px;
+  vertical-align: top;
+}
+
+.personality__profileItem {
+  display: inline-block;
+  padding: 0;
+  width: 33.333%;
+  vertical-align: top;
+}
+
+.personality__profilePhoto {
+  width: 50%;
+  height: 50%;
+}
+
+.personality__profileName {
+  padding: 5px 0;
+  font-size: 1.6em;
+  @include tablet {
+    font-size: 1.3em;
+  }
+}
+
+.personality__profileDescription {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+// **********************
+// contents
+// **********************
+
+.contents {
+  margin: 0 auto;
+  width: 960px;
+  padding-top: 20px;
+  @include tablet {
+    padding-top: 10px;
+    width: auto;
+  }
+  @include smartphone {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+.main {
+  margin-right: 10px;
+  width: 630px;
+  float: left;
+  @include tablet {
+    margin: 0 1% 0 2%;
+    width: 57%;
+  }
+  @include smartphone {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.side {
+  float: left;
+  width: 320px;
+  @include tablet {
+    margin: 0 1% 0 2%;
+    width: 37%;
+  }
+  @include smartphone {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.pager {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pager__item {
+  display: inline-block;
+  text-align: right;
+  a {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 1px 3px #B6B6B6;
+    &:hover {
+      background-color: #E7E7F3;
+      text-decoration: none;
+    }
+    @include smartphone {
+      width: 50%;
+      padding: 0px;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
+}
+
+// **********************
+// post
+// **********************
+
+.post {
+  display: block;
+  margin-bottom: 32px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: white;
+  color: $color-text;
+  @include tablet {
+    width: auto;
+  }
+  @include smartphone {
+    margin:16px;
+  }
+}
+
+.post__title {
+  margin-bottom: 8px;
+  color: $color-text;
+  font-size: 1.8em;
+  font-weight: bold;
+  @include smartphone {
+    font-size: 1.6em;
+  }
+}
+
+.post__meta {
+  margin-bottom: 16px;
+  color: $color-subText;
+  font-size: 0.8em;
+}
+
+.post__content {
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+// **********************
+// sidebar
+// **********************
+
+.sideMenu {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 1px 3px #B6B6B6;
+  @include smartphone {
+    border-radius: 0px;
+  }
+}
+
+.sideMenu__title {
+  background-color: #5c5c5c;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 40px;
+}
+
+.sideMenu__item {
+  position: relative;
+  overflow: auto;
+  vertical-align: middle;
+  a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    &:hover {
+      background-color: #E7E7F3;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    display: block;
+    width: 6px;
+    height: 6px;
+    right: 10px;
+    border-top: solid 3px;
+    border-right: solid 3px;
+    border-color: #cccccc;
+    line-height: 1.5;
+    transform: rotate(45deg);
+  }
+}
+
+.sideMenu__thumbnail {
+  float: left;
+  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+}
+
+.sideMenu__itemText{
+  margin: 2px 0 -2px 0;
+}
+
+.sideMenu__itemTitle {
+  color: #5c5c5c;
+}
+
+.sideMenu__itemDescription {
+  color: #b4b4b4;
+  font-size: 0.9em;
+}
+
+// **********************
+// footer
+// **********************
+
+.footer {
+  clear: both;
+  padding: 9px;
+  color: #fff;
+  text-align: center;
+  background-color: #2F3033;
+}

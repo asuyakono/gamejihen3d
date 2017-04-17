@@ -30,17 +30,15 @@ $(".top-visual").css( "background-size", "cover" );      //backgounrd-size:cover
 <p class="header__copy"><?php bloginfo('description'); ?></p>
 <div class="header__description">
 	<p>
-		東京ゲーム事変3Dは、
-		<br class="br-smartphone">
-		ものづくりが好きなゲーマー3人が
-		<br>
-		ゲームの話を中心にいろんな話題を
-		<br class="br-smartphone">
-		まったりと語らうPodcastです。
+		東京ゲーム事変3Dは、ものづくりが好きなゲーマー3人がゲームの話を中心にいろんな話題をまったりと語らうPodcastです。
 	</p>
 </div>
-<div class="button">
-	<a href="https://itunes.apple.com/jp/podcast/dong-jinggemu-shi-bian3d/id896349757?mt=2&uo=4" class="iTunes">iTunesで購読</a>
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGBKfbwhp5oKRbv92qRJfunzRZEapgqrveNc7gvoIokQo9TA/viewform?usp=sf_link" class="rss">おたよりを送る</a>
-</div>
+<ul class="header__buttons">
+	<li>
+		<a href="https://itunes.apple.com/jp/podcast/dong-jinggemu-shi-bian3d/id896349757?mt=2&uo=4" class="header__button--iTunes">iTunesで購読</a>
+	</li>
+	<li>
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGBKfbwhp5oKRbv92qRJfunzRZEapgqrveNc7gvoIokQo9TA/viewform?usp=sf_link" class="header__button--letter">おたよりを送る</a>
+	</li>
+</ul>
 </header>
