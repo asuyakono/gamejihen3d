@@ -86,6 +86,7 @@ a:hover {
   padding: 64px 32px;
   background: url(images/fv_bg.png);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 @media only screen and (max-width: 479px) {
