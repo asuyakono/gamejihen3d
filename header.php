@@ -30,7 +30,7 @@ $(".top-visual").css( "background-size", "cover" );      //backgounrd-size:cover
 <p class="header__copy"><?php bloginfo('description'); ?></p>
 <div class="header__description">
 	<p>
-		東京ゲーム事変3Dは、ものづくりが好きなゲーマー3人がゲームの話を中心にいろんな話題をまったりと語らうPodcastです。
+		東京ゲーム事変3Dは、ものづくりが好きなゲーマー3人がゲームの話を中心にいろんな話題をまったりと語らうPodcastです。隔週更新。番組へのご連絡は、gamejihen[at]gmail.com までどうぞ。
 	</p>
 </div>
 <ul class="header__buttons">

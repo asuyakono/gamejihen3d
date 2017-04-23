@@ -93,7 +93,7 @@ a {
   font-size: 1.8em;
   font-weight: bold;
   text-align: center;
-  text-shadow: 0px 0px 8px black;
+  text-shadow: 0px 0px 16px black;
   @include smartphone {
     top: -70px;
     padding-bottom: 16px;
